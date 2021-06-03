@@ -10,3 +10,8 @@ We have used Firebase Firestore as backend service and many more features.
 https://drive.google.com/file/d/1sLqFIEUw1v_lrgi9B1LJBQV1BSl19c-n/view?usp=sharing
 
 # App screenshots:
+![](Screenshots/login_1.jpeg)
+![](Screenshots/login_2.jpeg)
+![](Screenshots/home_page.jpeg)
+![](Screenshots/recipe_display.jpeg)
+![](Screenshots/recipe_upload.jpeg)
