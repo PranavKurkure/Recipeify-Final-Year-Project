@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="3dp">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="10dp">
+
+
+    
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/CardView.Light"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="4dp"
+        android:elevation="3dp"
+        app:cardElevation="5dp"
+        app:cardBackgroundColor="@color/cardbck">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="12dp"
+            android:background="?attr/selectableItemBackground">
+
+            <ImageView
+                android:id="@+id/img1"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@drawable/vegetables"
+                android:scaleType="centerCrop"/>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/view"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="12dp"
+                android:elevation="12dp"
+                app:cardCornerRadius="25dp"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_below="@id/img1">
+
+                <ImageView
+                    android:id="@+id/circleImage"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/vegetables"
+                    android:scaleType="fitCenter"/>
+
+            </androidx.cardview.widget.CardView>
+            
+
+            <TextView
+                android:id="@+id/vegetables"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vegetables"
+                style="@style/TextAppearance.AppCompat.Title"
+                android:layout_marginStart="12dp"
+                android:layout_below="@id/img1"
+                android:layout_toEndOf="@id/view"
+                android:layout_marginTop="12dp"/>
+
+            <TextView
+                android:id="@+id/desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/vegetable_subheading"
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:layout_below="@+id/vegetables"
+                android:layout_toEndOf="@id/view"
+                android:layout_marginStart="12dp"
+                android:textColor="@color/cardhead"/>
+            
+            <ImageButton
+                android:id="@+id/arrowButton"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="12dp"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@id/img1"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/ic_arrow_down"
+                android:backgroundTint="#000"/>
+            
+            <RelativeLayout
+                android:id="@+id/expandableView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/desc"
+                android:paddingBottom="15dp"
+                android:visibility="gone"
+                >
+
+
+                <androidx.core.widget.NestedScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/recyclerView"/>
+
+                <Button
+                    android:id="@+id/btnAddItem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/recyclerView"
+                    android:layout_marginTop="5dp"
+                    android:layout_centerHorizontal="true"
+                    android:text="add"
+                    android:textColor="#5a5a5a"
+                    android:backgroundTint="#e3e3e3"/>
+
+                </RelativeLayout>
+
+                </androidx.core.widget.NestedScrollView>
+
+
+
+
+
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+    </RelativeLayout>
+
+    </ScrollView>
+
+    
+
+</RelativeLayout>

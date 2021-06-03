@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Recipeify</string>
+    <string name="acc_type">Acc. Type</string>
+    <string name="contact">Contact</string>
+    <string name="close">Close</string>
+    <string name="sign_out">Sign out</string>
+    <string name="get_premium">get premium</string>
+    <string name="home">Home</string>
+    <string name="favourite">Favourite</string>
+    <string name="search">Search</string>
+    <string name="profile">Profile</string>
+
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. </string>
+    <string name="description">Description</string>
+    <string name="ingredients">Ingredients</string>
+    <string name="spices">Spices</string>
+    <string name="cook_time">Cook time</string>
+    <string name="let_s_cook">let\'s cook</string>
+    <string name="dish_name">Dish Name</string>
+    <string name="_10_mins">10 mins</string>
+    <string name="select_category">Select Category</string>
+    <string name="please_choose_category">Please choose category!</string>
+    <string name="recipe_category">Recipe Category</string>
+    <string name="rating">Rating</string>
+    <string name="name">Name</string>
+
+</resources>

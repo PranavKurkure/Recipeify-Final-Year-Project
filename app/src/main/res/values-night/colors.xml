@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#1A242F</color>
+    <color name="colorPrimaryDark">#1A242F</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="text">#FFFFFF</color>
+    <color name="yellow">#FFFF00</color>
+    <color name="red">#FF0000</color>
+    <color name="cardbck">#1e1e1e</color>
+    <color name="cardTitle">#e3e3e3</color>
+    <color name="cardhead">#8e8e8e</color>
+    <color name="bottomNav">#1a242f</color>
+    <color name="bottomNavIcon">#757564</color>
+    <color name="bottomNavIconText">#e3e3e3</color>
+    <color name="white">#ffffff</color>
+    <color name="checkBox">#767676</color>
+
+    <color name="chipBackgroundColor">#fff</color>
+    <color name="chipStrokeColor">#757564</color>
+    <color name="chipTextColor">#535353</color>
+</resources>

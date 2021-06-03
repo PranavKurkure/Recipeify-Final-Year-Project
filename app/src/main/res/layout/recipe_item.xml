@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="4dp"
+    android:layout_marginStart="4dp"
+    android:layout_marginEnd="4dp"
+    android:elevation="3dp"
+    app:cardElevation="5dp"
+    app:cardBackgroundColor="@color/cardbck">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground">
+
+        <ImageView
+            android:id="@+id/dish_image"
+            android:layout_width="match_parent"
+            android:layout_height="280dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/dal_makhani"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="280dp"
+            android:background="@drawable/title_background_reversed"/>
+
+        <TextView
+            android:id="@+id/dish_name"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dish_name"
+            android:textColor="#fff"
+            android:textSize="25sp"
+            style="@style/TextAppearance.AppCompat.Large"/>
+
+        <TextView
+            android:id="@+id/cook_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_10_mins"
+            android:layout_below="@id/dish_name"
+            android:layout_marginStart="12dp"
+            android:textSize="20dp"
+            android:textColor="#fff"/>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

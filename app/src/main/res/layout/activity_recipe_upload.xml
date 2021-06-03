@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingStart="8dp"
+    android:paddingEnd="8dp"
+    tools:context=".RecipeUpload">
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:gravity="top"
+                android:foregroundGravity="top"
+                android:weightSum="1"
+                android:orientation="horizontal"
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tl1"
+                android:layout_weight="0.5"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:counterMaxLength="25"
+                app:errorEnabled="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/dish_name"
+                    android:inputType="textPersonName|textCapWords"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Dish Name"
+                    android:maxLength="26"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/ftype"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    app:errorEnabled="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="0.5"
+                    android:gravity="top">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/foodType"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Food type"
+                        android:enabled="false"
+                        android:inputType="none" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+            </LinearLayout>
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tl2"
+        android:layout_below="@id/linearLayout"
+        android:layout_marginTop="7dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:errorEnabled="true"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        app:startIconDrawable="@drawable/ic_restaurant">
+
+        <AutoCompleteTextView
+            android:id="@+id/autoCompleteText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:hint="Select Category"
+            android:inputType="none"/>
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:id="@+id/LL"
+        android:weightSum="1"
+        android:layout_below="@id/tl2"
+        android:layout_marginTop="7dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tl3"
+                android:layout_weight="0.7"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:errorEnabled="true"
+                app:counterMaxLength="3"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:startIconDrawable="@drawable/ic_time"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/cook_time"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Cook time(mins)"
+                    android:inputType="number"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tl4"
+                android:layout_weight="0.3"
+                app:errorEnabled="true"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:hint="Servings"
+                app:startIconDrawable="@drawable/ic_add"
+                app:endIconMode="custom"
+                app:endIconDrawable="@drawable/ic_remove"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/servings"
+                    android:gravity="center"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"
+                    android:editable="false"
+                    android:hint="Servings"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tl5"
+                android:layout_below="@id/LL"
+                android:layout_marginTop="7dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:counterEnabled="true"
+                app:helperText="Keep it simple!"
+                app:helperTextEnabled="true"
+                app:helperTextTextColor="#2D7500"
+                app:errorEnabled="true"
+                app:counterMaxLength="400"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:startIconDrawable="@drawable/ic_description"
+                app:endIconMode="custom"
+                app:endIconDrawable="@drawable/ic_mic">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lines="3"
+                    android:inputType="textCapSentences"
+                    android:hint="Description"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tl6"
+                android:layout_below="@id/tl5"
+                android:padding="5dp"
+                app:errorEnabled="true"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:helperText="Press enter after each item"
+                app:helperTextTextColor="#2D7500"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_marginTop="10dp">
+
+                <com.hootsuite.nachos.NachoTextView
+                    android:id="@+id/ingredients"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center_vertical"
+                    android:hint="Ingredients"
+                    android:padding="8dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:id="@+id/LLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                android:layout_below="@id/tl6"
+                android:layout_marginTop="7dp">
+
+                <ImageView
+                    android:id="@+id/dish_image"
+                    android:backgroundTint="#000"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_weight="0.5"
+                    android:src="@drawable/add_photo"
+                    android:scaleType="fitCenter"/>
+
+
+                <LinearLayout
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5">
+
+
+                    <Button
+                        android:layout_marginStart="15dp"
+                        android:id="@+id/btnFile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="upload"
+                        android:textColor="@color/text"
+                        android:drawableLeft="@drawable/ic_file_upload"
+                        android:drawableTint="@color/text"/>
+
+                    <Button
+                        android:layout_marginStart="15dp"
+                        android:id="@+id/btnDelete"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="delete image"
+                        android:backgroundTint="#D50000"
+                        android:textColor="#fff"
+                        android:drawableLeft="@drawable/ic_delete"
+                        android:drawableTint="#fff"
+                        android:visibility="gone"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/LLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="8dp"
+                    android:text="Enter steps"
+                    style="@style/TextAppearance.AppCompat.Large"
+                    android:textSize="20dp"/>
+
+                <LinearLayout
+                    android:layout_below="@id/tv"
+                    android:id="@+id/layout_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="10dp"/>
+                <LinearLayout
+                    android:layout_marginTop="8dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/layout_list"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="3dp">
+                    <ImageButton
+                        android:id="@+id/btnAdd"
+                        android:layout_width="0dp"
+                        android:layout_weight="0.5"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_add"
+                        android:background="#00C853"
+                        android:padding="6dp"/>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+</RelativeLayout>

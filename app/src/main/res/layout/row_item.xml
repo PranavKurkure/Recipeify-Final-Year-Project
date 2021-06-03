@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="3dp"
+    android:padding="4dp"
+    android:background="?attr/selectableItemBackground">
+
+    <androidx.cardview.widget.CardView
+        app:cardCornerRadius="3dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground">
+
+        <TextView
+            android:id="@+id/recipeCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Appetizers"
+            android:textColor="#FFF"
+            android:layout_margin="10dp"
+            android:textSize="25dp"/>
+
+        <TextView
+            android:id="@+id/recipeNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5 recipes"
+            android:visibility="gone"
+            android:layout_below="@+id/recipeCategory"
+            android:layout_marginTop="90dp"
+            android:textColor="#FFF"
+            android:layout_marginLeft="15dp"
+            android:textSize="18dp"
+            />
+
+
+    </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

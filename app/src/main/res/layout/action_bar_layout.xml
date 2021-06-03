@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_gravity="center"
+    android:layout_width="match_parent"
+    app:contentInsetStart="0dp"
+    app:contentInsetLeft="0dp"
+    android:layout_height="?android:attr/actionBarSize"
+    android:background="@color/colorPrimary">
+
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvTitle"
+        android:layout_gravity="left"
+        android:layout_marginStart="8dp"
+        android:text="Recipeify"
+        android:textSize="25dp"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/text"
+        style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_below="@+id/tvTitle"
+        android:layout_marginStart="8dp"
+        android:visibility="visible"
+        android:id="@+id/userType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PREMIUM"
+        style="@style/TextAppearance.AppCompat.Subhead"
+        android:textColor="@color/text"
+        />
+
+    <ImageButton
+        android:id="@+id/btnMode"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_light_mode"
+        android:backgroundTint="@color/colorPrimary"/>
+
+
+</RelativeLayout>
