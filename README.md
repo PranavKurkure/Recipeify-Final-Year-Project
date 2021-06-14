@@ -6,8 +6,6 @@ Recipeify is a food application and a common platform for people to share their 
 A payment gateway is implemented in this app for future use to generate revenue through it and benefit people.
 We have used Firebase Firestore as backend service and many more features.
 
-# Download here:
-https://drive.google.com/file/d/1sLqFIEUw1v_lrgi9B1LJBQV1BSl19c-n/view?usp=sharing
 
 # Demo:
 https://www.youtube.com/watch?v=_Jmz901YTtw
